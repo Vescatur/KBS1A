@@ -28,13 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.fieldView1 = new KBS1SE.View.FieldView();
             this.SuspendLayout();
+            // 
+            // fieldView1
+            // 
+            this.fieldView1.Location = new System.Drawing.Point(12, 7);
+            this.fieldView1.Name = "fieldView1";
+            this.fieldView1.Size = new System.Drawing.Size(449, 296);
+            this.fieldView1.TabIndex = 0;
             // 
             // MainView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(473, 315);
+            this.ClientSize = new System.Drawing.Size(821, 504);
+            this.Controls.Add(this.fieldView1);
             this.Name = "MainView";
             this.Text = "MainView";
             this.ResumeLayout(false);
@@ -42,5 +51,7 @@
         }
 
         #endregion
+
+        private FieldView fieldView1;
     }
 }

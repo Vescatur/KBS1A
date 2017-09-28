@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace KBS1SE
 {
-    class Controller
+    public class Controller
     {
     }
 }

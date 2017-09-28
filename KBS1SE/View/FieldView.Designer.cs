@@ -43,7 +43,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Name = "FieldView";
             this.Size = new System.Drawing.Size(493, 296);
-            this.Load += new System.EventHandler(this.FieldView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
             this.ResumeLayout(false);
 

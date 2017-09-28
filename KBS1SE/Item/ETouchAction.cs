@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace KBS1SE
 {
-    public class ETouchAction
+    public enum ETouchAction
     {
-        enum Action { Nothing, End, Died}
+         Nothing, End, Died
     }
 }

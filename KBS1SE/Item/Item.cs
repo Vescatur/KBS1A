@@ -8,7 +8,7 @@ using System.Windows;
 
 namespace KBS1SE.Item
 {
-    public abstract class Item
+    public class Item
     {
 
         // declare een delegate for the ItemAction event
@@ -27,9 +27,9 @@ namespace KBS1SE.Item
         }
 
         
-        private int size; // de size van de item
+        private Vector size; // de size van de item
 
-        public int Size
+        public Vector Size
         {
             get { return size; }
             set { size = value; }
@@ -43,10 +43,16 @@ namespace KBS1SE.Item
         }
 
 
-        public Item()
-        {           
-            
+        public Item(Vector position, Vector size, Vector speed)
+        {
+            this.Position = position;
+            this.Size = size;
+            this.Speed = speed;
         }
-        public abstract ETouchAction OnTouch(Item touchedItem);
+
+        public virtual ETouchAction OnTouch(Item touchedItem)
+        {
+            return ETouchAction.Nothing;
+        }
     }
 }
