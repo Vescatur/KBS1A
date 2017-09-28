@@ -1,0 +1,11 @@
+C:\Users\hassa\source\repos\KBS1SE\KBS1SE\bin\Debug\KBS1SE.exe.config
+C:\Users\hassa\source\repos\KBS1SE\KBS1SE\bin\Debug\KBS1SE.exe
+C:\Users\hassa\source\repos\KBS1SE\KBS1SE\bin\Debug\KBS1SE.pdb
+C:\Users\hassa\source\repos\KBS1SE\KBS1SE\obj\Debug\KBS1SE.csprojResolveAssemblyReference.cache
+C:\Users\hassa\source\repos\KBS1SE\KBS1SE\obj\Debug\KBS1SE.control.UserControl1.resources
+C:\Users\hassa\source\repos\KBS1SE\KBS1SE\obj\Debug\KBS1SE.Properties.Resources.resources
+C:\Users\hassa\source\repos\KBS1SE\KBS1SE\obj\Debug\KBS1SE.Form1.resources
+C:\Users\hassa\source\repos\KBS1SE\KBS1SE\obj\Debug\KBS1SE.csproj.GenerateResource.Cache
+C:\Users\hassa\source\repos\KBS1SE\KBS1SE\obj\Debug\KBS1SE.csproj.CoreCompileInputs.cache
+C:\Users\hassa\source\repos\KBS1SE\KBS1SE\obj\Debug\KBS1SE.exe
+C:\Users\hassa\source\repos\KBS1SE\KBS1SE\obj\Debug\KBS1SE.pdb
