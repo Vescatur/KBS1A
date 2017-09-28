@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KBS1SE.model
+namespace KBS1SE.Field
 {
-    interface Interface1
+    interface Interface2
     {
     }
 }

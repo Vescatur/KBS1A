@@ -43,6 +43,7 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="control\CharacterControl.cs" />
@@ -52,10 +53,11 @@
     <Compile Include="control\UserControl1.Designer.cs">
       <DependentUpon>UserControl1.cs</DependentUpon>
     </Compile>
-    <Compile Include="model\Character.cs" />
-    <Compile Include="model\Item.cs" />
-    <Compile Include="model\Interface1.cs" />
-    <Compile Include="model\Interface2.cs" />
+    <Compile Include="Field\Character.cs" />
+    <Compile Include="Field\ETouchAction.cs" />
+    <Compile Include="Field\Item.cs" />
+    <Compile Include="Field\Interface1.cs" />
+    <Compile Include="Field\Interface2.cs" />
     <Compile Include="view\Form1.cs">
       <SubType>Form</SubType>
     </Compile>

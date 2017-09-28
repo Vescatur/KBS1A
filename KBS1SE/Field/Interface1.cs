@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KBS1SE.field
+namespace KBS1SE.Field
 {
-    class ETouchAction
+    interface Interface1
     {
     }
 }

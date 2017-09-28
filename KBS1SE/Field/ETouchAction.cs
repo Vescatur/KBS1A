@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KBS1SE.model
+namespace KBS1SE.Field
 {
-    public class Character : Item
+    public class ETouchAction
     {
-        public Character() : base(5,5,0,0) { }
+        enum Action { nothing, End, Died}
     }
 }
