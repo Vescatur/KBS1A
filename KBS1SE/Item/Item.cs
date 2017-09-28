@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Drawing;
 using System.Windows;
 
-namespace KBS1SE.Field
+namespace KBS1SE.Item
 {
     public abstract class Item
     {
@@ -17,13 +17,13 @@ namespace KBS1SE.Field
         // declare de ItemActoin event via de delegate
         public event ItemActionHander ItemAction;
 
-        private Vector pos;  //De x-as en Y-as positie van de Item. 
+        private Vector position;  //De x-as en Y-as positie van de Item. 
                         //Hoe hoger de waardes des te meer ze rechts beneden zijn
         
-        public Vector Pos
+        public Vector Position
         {
-            get { return pos; }
-            set { pos = Vector.Add(pos, value); }
+            get { return position; }
+            set { position = Vector.Add(position, value); }
         }
 
         
@@ -39,7 +39,7 @@ namespace KBS1SE.Field
         public Vector Speed
         {
             get { return speed; }
-            set { speed = Vector.Add(pos, value); }
+            set { speed = value; }
         }
 
 

@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KBS1SE.Field
+namespace KBS1SE
 {
-    public class Character : Item
+    public class Character : Item.Item
     {
-        public override ETouchAction OnTouch(Item touchedItem)
+        public override ETouchAction OnTouch(Item.Item touchedItem)
         {
             throw new NotImplementedException();
         }
