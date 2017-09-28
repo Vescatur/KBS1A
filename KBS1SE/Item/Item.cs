@@ -34,7 +34,7 @@ namespace KBS1SE.Item
             get { return size; }
             set { size = value; }
         }
-        private Vector speed;
+        private Vector speed; //snelheid van de item
 
         public Vector Speed
         {
@@ -42,7 +42,7 @@ namespace KBS1SE.Item
             set { speed = value; }
         }
 
-        private Color color;
+        private Color color; //kleur van de item
         public Color Color
         {
             get { return color; }
