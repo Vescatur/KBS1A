@@ -1,26 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Drawing;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace KBS1SE.View
+namespace KBS1SE
 {
-    public partial class FieldView : UserControl
+    public partial class Form1 : Form
     {
-        public FieldView()
+        public Form1()
         {
             InitializeComponent();
-            int i = 1;
-        }
-
-        private void FieldView_Load(object sender, EventArgs e)
-        {
-
+            BeginEind b = new BeginEind();
         }
     }
 }
