@@ -9,3 +9,14 @@ C:\Users\hassa\source\repos\KBS1SE\KBS1SE\obj\Debug\KBS1SE.csproj.GenerateResour
 C:\Users\hassa\source\repos\KBS1SE\KBS1SE\obj\Debug\KBS1SE.csproj.CoreCompileInputs.cache
 C:\Users\hassa\source\repos\KBS1SE\KBS1SE\obj\Debug\KBS1SE.exe
 C:\Users\hassa\source\repos\KBS1SE\KBS1SE\obj\Debug\KBS1SE.pdb
+C:\Users\Ivan\source\repos\WindowsFormsApp2\KBS1SE\bin\Debug\KBS1SE.exe.config
+C:\Users\Ivan\source\repos\WindowsFormsApp2\KBS1SE\bin\Debug\KBS1SE.exe
+C:\Users\Ivan\source\repos\WindowsFormsApp2\KBS1SE\bin\Debug\KBS1SE.pdb
+C:\Users\Ivan\source\repos\WindowsFormsApp2\KBS1SE\obj\Debug\KBS1SE.csprojResolveAssemblyReference.cache
+C:\Users\Ivan\source\repos\WindowsFormsApp2\KBS1SE\obj\Debug\KBS1SE.Properties.Resources.resources
+C:\Users\Ivan\source\repos\WindowsFormsApp2\KBS1SE\obj\Debug\KBS1SE.View.FieldView.resources
+C:\Users\Ivan\source\repos\WindowsFormsApp2\KBS1SE\obj\Debug\KBS1SE.View.MainView.resources
+C:\Users\Ivan\source\repos\WindowsFormsApp2\KBS1SE\obj\Debug\KBS1SE.csproj.GenerateResource.Cache
+C:\Users\Ivan\source\repos\WindowsFormsApp2\KBS1SE\obj\Debug\KBS1SE.csproj.CoreCompileInputs.cache
+C:\Users\Ivan\source\repos\WindowsFormsApp2\KBS1SE\obj\Debug\KBS1SE.exe
+C:\Users\Ivan\source\repos\WindowsFormsApp2\KBS1SE\obj\Debug\KBS1SE.pdb
