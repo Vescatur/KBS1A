@@ -22,6 +22,7 @@ namespace KBS1SE
 
         public UserControl1()
         {
+            MyCharacter = new Character();
             InitializeComponent();
         }
 
