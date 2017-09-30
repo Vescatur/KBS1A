@@ -15,7 +15,7 @@ namespace KBS1SE
         public Form1()
         {
             InitializeComponent();
-            BeginEind b = new BeginEind();
+          //  BeginEind b = new BeginEind();
         }
     }
 }

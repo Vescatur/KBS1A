@@ -41,5 +41,3 @@ C:\Users\hassa\OneDrive\Documents\GitHub\KBS1A\KBS1SE\obj\Debug\KBS1SE.csproj.Co
 C:\Users\hassa\OneDrive\Documents\GitHub\KBS1A\KBS1SE\obj\Debug\KBS1SE.exe
 C:\Users\hassa\OneDrive\Documents\GitHub\KBS1A\KBS1SE\obj\Debug\KBS1SE.pdb
 C:\Users\hassa\OneDrive\Documents\GitHub\KBS1A\KBS1SE\obj\Debug\KBS1SE.UserControl1.resources
->>>>>>> 7c9fdc01578359f1edeae44f1f351a3c12ebf621
->>>>>>> 23a83df4bb0b3d69286725d72d38894456a59fca
