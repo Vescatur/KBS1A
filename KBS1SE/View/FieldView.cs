@@ -22,5 +22,10 @@ namespace KBS1SE.View
         {
 
         }
+
+        private void textBoxSpeedX_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -28,19 +28,42 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.userControl11 = new KBS1SE.UserControl1();
             this.SuspendLayout();
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 10;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // userControl11
+            // 
+            this.userControl11.Location = new System.Drawing.Point(88, 92);
+            this.userControl11.MyCharacter = null;
+            this.userControl11.Name = "userControl11";
+            this.userControl11.Size = new System.Drawing.Size(287, 120);
+            this.userControl11.TabIndex = 0;
+            this.userControl11.Load += new System.EventHandler(this.userControl11_Load);
             // 
             // MainView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(473, 315);
+            this.Controls.Add(this.userControl11);
             this.Name = "MainView";
             this.Text = "MainView";
+            this.Load += new System.EventHandler(this.MainView_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private UserControl1 userControl11;
+        private System.Windows.Forms.Timer timer1;
     }
 }

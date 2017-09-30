@@ -23,9 +23,13 @@ namespace KBS1SE.Item
         public Vector Position
         {
             get { return position; }
-            set { position = Vector.Add(position, value); }
+            set { position = value; }
         }
 
+        public virtual void Move()
+        {
+
+        }
         
         private Vector size; // de size van de item
 

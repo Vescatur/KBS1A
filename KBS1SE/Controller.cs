@@ -19,14 +19,23 @@ namespace KBS1SE
         // Verplaats speler met een stap van Dx en Dy per tijdseenheid.
         public void Move(int MaxX, int MaxY)
         {
-            if(character.Position.X + character.Speed.X > MaxX ){
-                character.Speed = new Vector(MaxX - character.Position.X, character.Speed.Y);
-            }
-            if (character.Position.Y + character.Speed.Y > MaxY)
+            character.Position = Vector.Add(character.Position, character.Speed);
+            if (character.Position.X > MaxX)
             {
-                character.Speed = new Vector(character.Speed.X, MaxY - character.Position.Y);
+                character.Position = new Vector(MaxX, character.Position.Y);
             }
-            character.Position = character.Speed;
+            if (character.Position.X < 0)
+            {
+                character.Position = new Vector(0, character.Position.Y);
+            }
+            if (character.Position.Y < 0)
+            {
+                character.Position = new Vector(character.Position.X, 0);
+            }
+            if (character.Position.Y > MaxY)
+            {
+                character.Position = new Vector(character.Position.X, MaxY);
+            }
         }
     }
 }
