@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows;
+using System.Diagnostics;
 
 namespace KBS1SE
 {
@@ -128,43 +129,42 @@ namespace KBS1SE
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (up && left)
+            if (down && right)
             {
-                MyCharacter.Speed = new Vector(-1, -1);
-            }
-            else if (up && right)
-            {
-                MyCharacter.Speed = new Vector(1, -1);
-            }
-            else if (up)
-            {
-                MyCharacter.Speed = new Vector(0, -1);
+                MyCharacter.Speed = new Vector(5, 5);
             }
             else if (down && left)
             {
-                MyCharacter.Speed = new Vector(-1, 1);
-            }
-            else if (down && right)
-            {
-                MyCharacter.Speed = new Vector(1, 1);
+                MyCharacter.Speed = new Vector(-5, 5);
             }
             else if (down)
             {
-                MyCharacter.Speed = new Vector(0, 1);
+                MyCharacter.Speed = new Vector(0, 5);
+            }
+            else if (up && right)
+            {
+                MyCharacter.Speed = new Vector(5, -5);
+            }
+            else if (up && left)
+            {
+                MyCharacter.Speed = new Vector(-5, -5);
+            }
+            else if (up)
+            {
+                MyCharacter.Speed = new Vector(0, -5);
             }
             else if (right)
             {
-                MyCharacter.Speed = new Vector(1, 0);
+                MyCharacter.Speed = new Vector(5, 0);
             }
             else if (left)
             {
-                MyCharacter.Speed = new Vector(-1, 0);
+                MyCharacter.Speed = new Vector(-5, 0);
             }
             else
             {
                 MyCharacter.Speed = new Vector(0, 0);
             }
-
         }
     }
 }

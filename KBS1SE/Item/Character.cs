@@ -12,7 +12,7 @@ namespace KBS1SE
         {
             throw new NotImplementedException();
         }
-        public Character() : base(0, 0, 0, 0, 5, 5, System.Drawing.Color.Green) { }
+        public Character() : base(0, 0, 0, 0, 50, 50, System.Drawing.Color.Green) { }
 
     }
 }

@@ -19,6 +19,8 @@ namespace KBS1SE
         // Verplaats speler met een stap van Dx en Dy per tijdseenheid.
         public void Move(int MaxX, int MaxY)
         {
+            MaxX -= Convert.ToInt32(character.Size.X);
+            MaxY -= Convert.ToInt32(character.Size.X);
             character.Position = Vector.Add(character.Position, character.Speed);
             if (character.Position.X > MaxX)
             {

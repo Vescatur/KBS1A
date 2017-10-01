@@ -23,7 +23,7 @@ namespace KBS1SE.Item
         public Vector Position
         {
             get { return position; }
-            set { position = value; }
+            set { position = value; if (ItemAction != null) ItemAction(this); }
         }
 
         public virtual void Move()
