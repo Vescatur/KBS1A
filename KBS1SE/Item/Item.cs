@@ -34,7 +34,7 @@ namespace KBS1SE.Item
             get { return size; }
             set { size = value; }
         }
-        private Vector speed;
+        private Vector speed; //snelheid van de item
 
         public Vector Speed
         {
@@ -42,7 +42,14 @@ namespace KBS1SE.Item
             set { speed = value; }
         }
 
+        private Color color; //kleur van de item
+        public Color Color
+        {
+            get { return color; }
+            set { color = value; }
+        }
 
+<<<<<<< HEAD
         public Item(Vector position, Vector size, Vector speed)
         {
             this.Position = position;
@@ -53,6 +60,15 @@ namespace KBS1SE.Item
         public virtual ETouchAction OnTouch(Item touchedItem)
         {
             return ETouchAction.Nothing;
+=======
+
+        public Item(int x, int y, int a, int b, int c, int d, Color color)
+        {
+            position = new Vector(x, y);
+            speed = new Vector(a, b);
+            size = new Vector(c, d);
+            this.color = color;
+>>>>>>> 23a83df4bb0b3d69286725d72d38894456a59fca
         }
     }
 }
