@@ -12,18 +12,14 @@ namespace KBS1SE.Item
     {
 
 
-        // declare een delegate for the ItemAction event
-        public delegate void ItemActionHander(object sender);
-
-        // declare de ItemActoin event via de delegate
-        public event ItemActionHander ItemAction;
+    
         private Vector position;  //De x-as en Y-as positie van de Item. 
                         //Hoe hoger de waardes des te meer ze rechts beneden zijn
         
         public Vector Position
         {
             get { return position; }
-            set { position = value; if (ItemAction != null) ItemAction(this); }
+            set { position = value; }
         }
 
         public abstract void Move(int x, int y);

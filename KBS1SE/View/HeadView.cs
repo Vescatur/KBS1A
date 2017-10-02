@@ -12,25 +12,30 @@ using KBS1SE.Item;
 
 namespace KBS1SE.View
 {
-    public partial class HeadView : Form
-    {
-        Character character;
-        Controller controller;
-        public HeadView()
+        public partial class HeadView : Form
         {
-            
-            InitializeComponent();
-            this.KeyPreview = true;
-            character = new Character();
-            fieldView1.KoppelSpelerEnMaakPanelObserver(character);
-            userControl11.MyCharacter = character;
-            controller = new Controller(character);
-            
-        }
-        private void MainTimer_Tick(object sender, EventArgs e)
-        {
-                controller.Move(this.fieldView1.ClientSize.Width, this.fieldView1.ClientSize.Height);
-                
+            Field field;
+            Character character;
+            Goal goal;
+            Start start;
+            Auto auto;
+            public HeadView()
+            {
+
+                InitializeComponent();
+                this.KeyPreview = true;
+                goal = new Goal(this.fieldView1.ClientSize.Width, this.fieldView1.ClientSize.Height);
+                start = new Start();
+                character = new Character();
+                auto = new Auto(this.fieldView1.ClientSize.Width, this.fieldView1.ClientSize.Height, character);
+                field = new Field();
+                fieldView1.KoppelModelEnMaakObserver(field);
+                userControl11.MyCharacter = character;
+
+            }
+            private void MainTimer_Tick(object sender, EventArgs e)
+            {
+                field.Move(this.fieldView1.ClientSize.Width, this.fieldView1.ClientSize.Height);
+            }
         }
     }
-}

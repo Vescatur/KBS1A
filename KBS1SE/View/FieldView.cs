@@ -1,61 +1,37 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
 using System.Drawing;
-using System.Drawing.Drawing2D;
-using System.Windows;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing.Drawing2D;
 using KBS1SE.Item;
 
 namespace KBS1SE.View
 {
     public partial class FieldView : UserControl
     {
-        private Field field;
-        private Character myCharacter;
-        public Character MyCharacter
-        {
-            get { return myCharacter; }
-            set { myCharacter = value; }
-        }
-
         public FieldView()
         {
             InitializeComponent();
             this.DoubleBuffered = true;
         }
 
-        public void KoppelFieldToView(Field field)
+        private Field myField;
+
+        public Field MyField
         {
-            this.field = field;
+            get { return myField; }
+            set { myField = value; }
         }
 
-//        protected override void OnPaint(PaintEventArgs e)
-//        {
-//            double X = this.Width;
-//            double Y = this.Height;
-//            if (field != null)
-//            {
-//                List<Item.Item> fieldItems = field.Items;
-//                base.OnPaint(e);
-//                e.Graphics.Clear(this.BackColor);
-//                e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
-//                e.Graphics.PixelOffsetMode = PixelOffsetMode.HighQuality;
-//                SolidBrush myBrush = new SolidBrush(Color.Red);
-//                for (int i = 0; i < fieldItems.Count; i++)
-//                {
-//                    Item.Item item = fieldItems[i];
-//                    Vector PixelPostion = GetPixelFromVector(item.Position, X, Y);
-//                    Vector PixelSize = GetPixelFromVector(item.Size, X, Y);
-//                    e.Graphics.FillRectangle(myBrush,
-//                        new Rectangle((int) PixelPostion.X, (int) PixelPostion.Y, (int) PixelSize.X,
-//                            (int) PixelSize.Y));
-//                }
-//            }
-//        }
-
-        public void KoppelSpelerEnMaakPanelObserver(Character character)
+        public void KoppelModelEnMaakObserver(Field field)
         {
-            myCharacter = character;
-            MyCharacter.ItemAction += UpdatePanel;
+            myField = field;
+            MyField.ItemAction += UpdatePanel;
         }
 
         public void UpdatePanel(object sender)
@@ -69,20 +45,16 @@ namespace KBS1SE.View
             e.Graphics.Clear(this.BackColor);
             e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
             e.Graphics.PixelOffsetMode = PixelOffsetMode.HighQuality;
-            if (myCharacter != null)
+            if (Field.ItemList != null)
             {
-                e.Graphics.FillRectangle(Brushes.Green, Convert.ToInt32(MyCharacter.Position.X),
-                    Convert.ToInt32(MyCharacter.Position.Y), Convert.ToInt32(myCharacter.Size.X),
-                    Convert.ToInt32(myCharacter.Size.Y));
-                e.Graphics.DrawRectangle(Pens.Green, Convert.ToInt32(MyCharacter.Position.X),
-                    Convert.ToInt32(MyCharacter.Position.Y), Convert.ToInt32(myCharacter.Size.X),
-                    Convert.ToInt32(myCharacter.Size.Y));
+                SolidBrush brush;
+                foreach (Item.Item item in Field.ItemList)
+                {
+                    brush = new SolidBrush(item.Color);
+                    e.Graphics.FillRectangle(brush, Convert.ToInt32(item.Position.X), Convert.ToInt32(item.Position.Y), Convert.ToInt32(item.Size.X), Convert.ToInt32(item.Size.Y));
+                    e.Graphics.DrawRectangle(Pens.Black, Convert.ToInt32(item.Position.X), Convert.ToInt32(item.Position.Y), Convert.ToInt32(item.Size.X), Convert.ToInt32(item.Size.Y));
+                }
             }
-        }
-
-        private Vector GetPixelFromVector(Vector Vector, double X, double Y)
-        {
-            return new Vector(Vector.X / 100 * X, Vector.Y / 100 * Y);
         }
     }
 }
