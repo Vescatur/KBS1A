@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            KBS1SE.Character character2 = new KBS1SE.Character();
+            KBS1SE.Item.Character character2 = new KBS1SE.Item.Character();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HeadView));
             this.userControl11 = new KBS1SE.UserControl1();
             this.MainTimer = new System.Windows.Forms.Timer(this.components);
