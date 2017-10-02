@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Forms;
+using System.Drawing.Drawing2D;
 
 namespace KBS1SE.View
 {
@@ -45,15 +46,60 @@ namespace KBS1SE.View
                     Item.Item item = fieldItems[i];
                     Vector PixelPostion = GetPixelFromVector(item.Position, X, Y);
                     Vector PixelSize = GetPixelFromVector(item.Size, X, Y);
-                    e.Graphics.FillRectangle(myBrush,new Rectangle((int) PixelPostion.X, (int) PixelPostion.Y, (int) PixelSize.X,(int) PixelSize.Y));
+                    e.Graphics.FillRectangle(myBrush,
+                        new Rectangle((int) PixelPostion.X, (int) PixelPostion.Y, (int) PixelSize.X,
+                            (int) PixelSize.Y));
                 }
+            }
+        }
+
+        public FieldView()
+        {
+            InitializeComponent();
+
+            this.DoubleBuffered = true;
+        }
+
+        private Character myCharacter;
+
+        public Character MyCharacter
+        {
+            get { return myCharacter; }
+            set { myCharacter = value; }
+        }
+
+        public void KoppelSpelerEnMaakPanelObserver(Character character)
+        {
+            myCharacter = character;
+            //Speler.SpelerChanged += new Speler.SpelerChangedHandler(UpdatePanel);
+            MyCharacter.ItemAction += UpdatePanel;
+        }
+
+        public void UpdatePanel(object sender)
+        {
+            this.Invalidate();
+        }
+
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            base.OnPaint(e);
+            e.Graphics.Clear(this.BackColor);
+            e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
+            e.Graphics.PixelOffsetMode = PixelOffsetMode.HighQuality;
+            if (myCharacter != null)
+            {
+                e.Graphics.FillRectangle(Brushes.Green, Convert.ToInt32(MyCharacter.Position.X),
+                    Convert.ToInt32(MyCharacter.Position.Y), Convert.ToInt32(myCharacter.Size.X),
+                    Convert.ToInt32(myCharacter.Size.Y));
+                e.Graphics.DrawRectangle(Pens.Green, Convert.ToInt32(MyCharacter.Position.X),
+                    Convert.ToInt32(MyCharacter.Position.Y), Convert.ToInt32(myCharacter.Size.X),
+                    Convert.ToInt32(myCharacter.Size.Y));
             }
         }
 
         private Vector GetPixelFromVector(Vector Vector, double X, double Y)
         {
-            
-            return new Vector(Vector.X/100*X, Vector.Y / 100 * Y);
+            return new Vector(Vector.X / 100 * X, Vector.Y / 100 * Y);
         }
     }
 }
