@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows;
 using System.Diagnostics;
+using KBS1SE.Item;
 
 namespace KBS1SE
 {

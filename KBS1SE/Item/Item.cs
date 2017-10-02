@@ -11,12 +11,12 @@ namespace KBS1SE.Item
     public abstract class Item
     {
 
+
         // declare een delegate for the ItemAction event
         public delegate void ItemActionHander(object sender);
 
         // declare de ItemActoin event via de delegate
         public event ItemActionHander ItemAction;
-
         private Vector position;  //De x-as en Y-as positie van de Item. 
                         //Hoe hoger de waardes des te meer ze rechts beneden zijn
         
@@ -26,10 +26,7 @@ namespace KBS1SE.Item
             set { position = value; if (ItemAction != null) ItemAction(this); }
         }
 
-        public virtual void Move()
-        {
-
-        }
+        public abstract void Move(int x, int y);
         
         private Vector size; // de size van de item
 
@@ -43,7 +40,7 @@ namespace KBS1SE.Item
         public Vector Speed
         {
             get { return speed; }
-            set { speed = value; }
+            set { speed = value;}
         }
 
         private Color color; //kleur van de item
@@ -60,6 +57,7 @@ namespace KBS1SE.Item
             speed = new Vector(a, b);
             size = new Vector(c, d);
             this.color = color;
+            Field.ItemList.Add(this);
         }
         public abstract ETouchAction OnTouch(Item touchedItem);
     }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using KBS1SE.Item;
 
 namespace KBS1SE
 {
